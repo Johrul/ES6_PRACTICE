@@ -1,11 +1,13 @@
+"use strict"
 class father{
-    
+
+
     greet(){
         console.log("Hi I am from Parent");
     }
     constructor(name)
     {
-        console.log("Hi am from constructor", name);
+        console.log("Hi am from constructor", this.name);
     }
     
 }
@@ -13,7 +15,9 @@ class father{
 // var v=new father();
 // v.greet();
 class son extends father{
+    
       callar(){
+          
           super.greet();
       }
 }
@@ -22,4 +26,8 @@ class son extends father{
 //(new son()).greet();
 
  //  father.greet();
- (new son()).callar()
+ //(new son()).callar()
+
+ var obj = new son();
+
+ obj.callar();
